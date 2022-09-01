@@ -1,0 +1,25 @@
+.newButton {
+  margin-bottom: 30px;
+}
+
+.logOutButton {
+  margin-top: 30px;
+}
+
+.infoButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.card {
+  transition-duration: 0.2s;
+}
+
+.card:hover {
+  transform: translatey(-5px);
+}
+
+.filter {
+  display: inline-flex;
+}

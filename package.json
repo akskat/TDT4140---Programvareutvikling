@@ -1,0 +1,29 @@
+{
+  "name": "lettbillett",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "install:ci": "npm ci && cd backend && npm ci && cd ../frontend && npm ci",
+    "start": "npm run install:all && concurrently -k -n Express,React -c green,cyan \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "start:ci": "concurrently -k -n Express,React -c green,cyan \"cd backend && npm start\" \"cd frontend && npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier:check": "prettier --check '**/*.{js,json,css,md,yml,yaml,ts,tsx}'",
+    "prettier:write": "prettier --write '**/*.{js,json,css,md,yml,yaml,ts,tsx}'",
+    "prepare-deploy": "cd frontend/ && npm run build && mv build/ ../backend/react-build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.stud.idi.ntnu.no/tdt4140-2022/landsby-1/gruppe_12/pu-gruppe-12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "devDependencies": {
+    "cypress": "^9.5.0",
+    "prettier": "2.5.1"
+  }
+}
