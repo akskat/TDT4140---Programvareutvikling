@@ -12,7 +12,7 @@ function DatabaseAPI() {
 DatabaseAPI.prototype.connect = async function () {
   try {
     await this.mongoose.connect(
-      "mongodb+srv://LettBilletData:TAr6ELCBA3dmDfb@cluster0.mwyjc.mongodb.net/LettBillett2?retryWrites=true&w=majority",
+      "insert mongo db link her",
       {
         autoIndex: true,
       }
